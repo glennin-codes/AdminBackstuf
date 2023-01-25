@@ -3,7 +3,7 @@
 
     try{
 
-const car=carsModel.create(req.body);
+   await carsModel.create(req.body);
   return res.status(201).json({"code":1})
     }
     catch(error){
