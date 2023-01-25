@@ -1,5 +1,5 @@
 import {cars} from './cars.js'
-import connectDb from './db/config.js'
+import connect from './db/config.js'
 import carsModel from './models/cars.js'
 import dotenv from 'dotenv'
 dotenv.config()
@@ -7,7 +7,7 @@ dotenv.config()
 const start= async ()=>{
     try{
        
-        await connectDb(process.env.MONGO_URI)
+        await connect(process.env.MONGO_URl)
         await carsModel.deleteMany()//first delete everything in the database
         await carsModel.create(cars)//add the json products
 console.log("connection succesful")
