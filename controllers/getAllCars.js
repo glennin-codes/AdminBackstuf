@@ -56,7 +56,7 @@ data= await carsModel.find(queryObject).limit(Number(dataAmount));
 
    
 
-    console.log(req.params)
+    // console.log(req.params)
     res.status(200).json(data)
 
     }
